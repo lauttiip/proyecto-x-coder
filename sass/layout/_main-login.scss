@@ -1,0 +1,129 @@
+.main-login{
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+
+    .imgLogin{
+        background-image: url("../assets/fondoArqu.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+        width: 50%;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: 15% 70% 15%;
+        grid-template-areas: "h1" "img" "p";
+        h1{
+            grid-area: h1;
+            height: 30%;
+            display: flex;
+            font-size: 4rem;
+            color: beige;
+            align-self: self-end;
+            justify-self: center;
+            align-items: center;
+            .logo{
+                height: 100%;
+                padding: 0 10px;
+            }
+        }
+        .imgIlustracion{
+            grid-area: img;
+            align-self: center;
+            justify-self: center;
+            width: 80%;
+            height: 80%;
+            margin: 30px 0;
+        }
+        p{
+            grid-area: p;
+            width: 60%;
+            text-align: center;
+            color: beige;
+            font-size: 1.6rem;
+            justify-self: center;
+            align-self: self-start;
+        }
+    }
+
+    .contenedorForm{
+        background-image: url("../assets/fondo1.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: contrast(100%);
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .formLogin{
+            width: 420px;
+            background: transparent;
+            border: 2px solid #333;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 15px #333;
+            color: #fff;
+            border-radius: 10px;
+            padding: 30px 40px;
+            form{
+                
+                h2{
+                    font-size: 2.3rem;
+                    text-align: center;
+                }
+                .input-box{
+                    position: relative;
+                    width: 100%;
+                    height: 3.125rem;
+                    margin: 1.875rem 0;
+                    input{
+                        width: 100%;
+                        height: 100%;
+                        background: transparent;
+                        outline: none;
+                        border: 2px solid rgb(255, 255, 255);
+                        border-radius: 40px;
+                        font-size: 16px;
+                        color: #fff;
+                        padding: 20px 50px 20px 20px;
+                        &::placeholder{
+                            color: #fff;
+                        }
+                    }
+                    i{
+                        position: absolute;
+                        right: 20px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        font-size: 1.25rem;
+                    }
+                }
+                .recordar-olvido{
+                    font-size: .9375rem;
+                    margin:  -15px 0 15px;
+                    label{
+                        input{
+                            accent-color: #fff;
+                            margin-right: 3px;
+                        }
+                    }
+                    
+                }
+                .btn{
+                    width: 100%;
+                    height: 2.8125rem;
+                    background: #fff;
+                    border: none;
+                    outline: none;
+                    border-radius: 2.5rem;
+                    box-shadow: 0 0 10px rgb(20, 20, 20);
+                    cursor: pointer;
+                    font-size: 1rem;
+                    color: #333;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
