@@ -30,10 +30,26 @@
                         <label>
                             <a href="">Olvidé mi contraseña</a>
                     </div>
-                    <button type="submit" onclick="location.href='./pages/seleccion.html' " class="btn">Iniciar sesion</button>
+                    <button type="submit" class="btn">Iniciar sesión</button>
                 </form>
             </div>
         </div>
     </main>
+    <script>
+        function togglePassword() {
+            var passwordInput = document.getElementById("password");
+            var lockIcon = document.getElementById("togglePassword");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                lockIcon.classList.remove("bx-lock-alt");
+                lockIcon.classList.add("bx-lock-open");
+            } else {
+                passwordInput.type = "password";
+                lockIcon.classList.remove("bx-lock-open");
+                lockIcon.classList.add("bx-lock-alt");
+            }
+        }
+    </script>
 </body>
 </html>
