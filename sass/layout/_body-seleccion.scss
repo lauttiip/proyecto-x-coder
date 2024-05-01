@@ -1,0 +1,39 @@
+.body-seleccion{
+    background-image: url("../assets/mix_texture.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: center;
+    div{
+        width: 25%;
+        height: 550px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background: transparent;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 15px #010102;
+        color: #fff;
+        border-radius: 10px;
+        padding: 120px 40px;
+        
+        button{
+            padding: 15px 30px;
+            background: #020727d5;
+            border: none;
+            outline: none;
+            border-radius: 2.5rem;
+            box-shadow: 0 0 15px rgb(20, 20, 20);
+            cursor: pointer;
+            font-size: 3rem;
+            color: #ffffff;
+            font-weight: 600;
+            &:hover{
+                background: #0000009d;
+                transition: 0.5s;
+                font-size: 3.2rem;
+            }
+        }
+    }
+}
