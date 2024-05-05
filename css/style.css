@@ -231,3 +231,18 @@ body {
 .recordar-olvido {
   text-align: center;
 }
+
+.blur-in {
+  display: inline-block;
+  animation: blurIn 0.5s ease forwards;
+}
+@keyframes blurIn {
+  from {
+    opacity: 0;
+    filter: blur(7px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
