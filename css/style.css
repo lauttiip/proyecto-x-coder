@@ -1,151 +1,230 @@
-/*utilities*/
+
+        /*utilities*/
 /*bases*/
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Kode+Mono:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedan:ital@0;1&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif; }
+font-family: "Poppins", sans-serif;
+}
 
 body {
   width: 100%;
-  height: 100vh; }
+height: 100vh;
+}
 
 .main-login {
   display: flex;
+  width: 100%;
+  background-size: cover;
+  background-image: url("../assets/fondo1.png");
   height: 100%;
-  flex-direction: row; }
-  .main-login .imgLogin {
-    background-image: url("../assets/fondoArqu.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right;
-    width: 50%;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(1, 100%);
-    grid-template-rows: 15% 70% 15%;
-    grid-template-areas: "h1" "img" "p"; }
-    .main-login .imgLogin h1 {
-      grid-area: h1;
-      height: 30%;
-      display: flex;
-      font-size: 4rem;
-      color: beige;
-      align-self: self-end;
-      justify-self: center;
-      align-items: center; }
-      .main-login .imgLogin h1 .logo {
-        height: 100%;
-        padding: 0 10px; }
-    .main-login .imgLogin .imgIlustracion {
-      grid-area: img;
-      align-self: center;
-      justify-self: center;
-      width: 80%;
-      height: 80%;
-      margin: 30px 0; }
-    .main-login .imgLogin p {
-      grid-area: p;
-      width: 60%;
-      text-align: center;
-      color: beige;
-      font-size: 1.6rem;
-      justify-self: center;
-      align-self: self-start; }
-  .main-login .contenedorForm {
-    background-image: url("../assets/fondo1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .main-login .contenedorForm .formLogin {
-      width: 420px;
-      background: transparent;
-      border: 2px solid #333;
-      backdrop-filter: blur(20px);
-      box-shadow: 0 0 15px #333;
-      color: #fff;
-      border-radius: 10px;
-      padding: 30px 40px; }
-      .main-login .contenedorForm .formLogin form h2 {
-        font-size: 2.3rem;
-        text-align: center; }
-      .main-login .contenedorForm .formLogin form .input-box {
-        position: relative;
-        width: 100%;
-        height: 3.125rem;
-        margin: 1.875rem 0; }
-        .main-login .contenedorForm .formLogin form .input-box input {
-          width: 100%;
-          height: 100%;
-          background: transparent;
-          outline: none;
-          border: 2px solid white;
-          border-radius: 40px;
-          font-size: 16px;
-          color: #fff;
-          padding: 20px 50px 20px 20px; }
-          .main-login .contenedorForm .formLogin form .input-box input::placeholder {
-            color: #fff; }
-        .main-login .contenedorForm .formLogin form .input-box i {
-          position: absolute;
-          right: 20px;
-          top: 50%;
-          transform: translateY(-50%);
-          font-size: 1.25rem; }
-      .main-login .contenedorForm .formLogin form .recordar-olvido {
-        font-size: .9375rem;
-        margin: -15px 0 15px; }
-        .main-login .contenedorForm .formLogin form .recordar-olvido label input {
-          accent-color: #fff;
-          margin-right: 3px; }
-      .main-login .contenedorForm .formLogin form .btn {
-        width: 100%;
-        height: 2.8125rem;
-        background: #fff;
-        border: none;
-        outline: none;
-        border-radius: 2.5rem;
-        box-shadow: 0 0 10px #141414;
-        cursor: pointer;
-        font-size: 1rem;
-        color: #333;
-        font-weight: 600; }
+  flex-direction: row;
+}
 
-.body-seleccion {
-  background-image: url("../assets/mix_texture.svg");
+.main-login .imgLogin {
+  border-radius: 4px;
+  box-shadow: 2px 6px 30px 6px rgb(0, 0, 0, .6);
+  background-image: url("../assets/fondoArqu.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  align-content: center; }
-  .body-seleccion div {
-    width: 25%;
-    height: 550px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background: transparent;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 15px #010102;
-    color: #fff;
-    border-radius: 10px;
-    padding: 120px 40px; }
-    .body-seleccion div button {
-      padding: 15px 30px;
-      background: #020727d5;
-      border: none;
-      outline: none;
-      border-radius: 2.5rem;
-      box-shadow: 0 0 15px #141414;
-      cursor: pointer;
-      font-size: 3rem;
-      color: #ffffff;
-      font-weight: 600; }
-      .body-seleccion div button:hover {
-        background: #0000009d;
-        transition: 0.5s;
-        font-size: 3.2rem; }
+  background-position: right;
+  width: 50%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(1, 100%);
+  grid-template-rows: 15% 70% 15%;
+  grid-template-areas: "h1" "img" "p";
+}
+
+.main-login .imgLogin h1 {
+  grid-area: h1;
+  height: 30%;
+  display: flex;
+  font-size: 4rem;
+  color: beige;
+  align-self: self-end;
+  justify-self: center;
+  align-items: center;
+}
+
+.main-login .imgLogin h1 .logo {
+  height: 100%;
+  padding: 0 10px;
+}
+
+.main-login .imgLogin .imgIlustracion {
+  grid-area: img;
+  align-self: center;
+  justify-self: center;
+  width: 80%;
+  height: 80%;
+  margin: 30px 0;
+}
+
+.main-login .imgLogin p {
+  grid-area: p;
+  width: 60%;
+  text-align: center;
+  color: beige;
+  font-size: 1.6rem;
+  justify-self: center;
+  align-self: self-start;
+}
+
+.main-login .contenedorForm {
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: contrast(100%);
+  width: 50%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-login .contenedorForm .formLogin {
+  width: 420px;
+  background: transparent;
+  border: 2px solid #333;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 15px #333;
+  color: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+.main-login .contenedorForm .formLogin form h2 {
+  font-size: 2.3rem;
+  text-align: center;
+}
+
+.main-login .contenedorForm .formLogin form .input-box {
+  position: relative;
+  width: 100%;
+  height: 3.125rem;
+  margin: 1.875rem 0;
+}
+
+.main-login .contenedorForm .formLogin form .input-box input {
+  width: 100%;
+  height: 100%;
+background: transparent;
+outline: none;
+border: 2px solid white;
+border-radius: 40px;
+font-size: 16px;
+color: #fff;
+padding: 20px 50px 20px 20px;
+}
+
+.main-login .contenedorForm .formLogin form .input-box input::placeholder {
+color: #fff;
+}
+
+.main-login .contenedorForm .formLogin form .input-box i {
+position: absolute;
+right: 20px;
+top: 50%;
+transform: translateY(-50%);
+font-size: 1.25rem;
+}
+
+.main-login .contenedorForm .formLogin form .recordar-olvido {
+font-size: .9375rem;
+margin: -15px 0 15px;
+}
+
+.main-login .contenedorForm .formLogin form .recordar-olvido label input {
+accent-color: #fff;
+margin-right: 3px;
+}
+
+.main-login .contenedorForm .formLogin form .btn {
+width: 100%;
+height: 2.8125rem;
+background: #fff;
+border: none;
+outline: none;
+border-radius: 2.5rem;
+box-shadow: 0 0 10px #141414;
+cursor: pointer;
+font-size: 1rem;
+color: #333;
+font-weight: 600;
+}
+
+.imgIWave {
+position: absolute;
+bottom: 0;
+left: 0;
+width: auto;
+height: 40%;
+z-index: -1;
+}
+
+.imgIWave path {
+fill: #000000;
+}
+        @keyframes slideIn {
+          0% {
+              transform: translateX(0);
+              opacity: 1;
+          }
+          100% {
+              transform: translateX(-100%);
+              opacity: 0;
+          }
+      }
+      
+      @keyframes slideFromBehind {
+          0% {
+              opacity: 0;
+          }
+          100% {
+              opacity: 1;
+          }
+      }
+      
+      .main-login .contenedorForm .formLogin form h2 {
+          font-size: 2.3rem;
+          text-align: center;
+      }
+      
+      .main-login .contenedorForm .formLogin form h2 span {
+          display: inline-block;
+          white-space: nowrap;
+          overflow: hidden;
+      }
+      
+      .main-login .contenedorForm .formLogin form h2 span:nth-child(1) {
+        animation: slideFromBehind 1.5s ease-in;
+      }
+      
+      .main-login .contenedorForm .formLogin form h2 span:nth-child(2) {
+          animation: slideFromBehind 1.5s ease-in;
+      }
+      .link {
+        color: #3798ff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .link:hover {
+        color: #0056b3;
+    }
+    
+    .link:focus {
+        outline: none;
+    }
+    
+    .link:active {
+        color: #023770;
+    }
+    .recordar-olvido{
+      text-align: center;
+    }
+    
+          
