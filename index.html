@@ -10,14 +10,14 @@
 <body>
     <main class="main-login">
         <div class="imgLogin">
-            <h1><img class="logo" src="./assets/firebase-logo-40.png" alt="logo">Improvrein</h1>
+            <h1><img class="logo" src="./assets/firebase-logo-40.png" alt="logo"><span class="heading">Improvrein</span></h1>
             <img class="imgIlustracion" src="./assets/ilustracionLogin.svg" alt="ilustracion de gente trabajando">
             <p>"Construyendo el futuro con innovación y solidez"</p>
         </div>
         <div class="contenedorForm">
             <div class="formLogin">
                 <form action="./pages/seleccion.html" method="post">
-                    <h2>Iniciar sesión</h2>
+                    <h2><span>Iniciar</span> <span>sesión</span></h2>
                     <div class="input-box">
                         <input type="text" placeholder="Usuario" required>
                         <i class='bx bx-user'></i>
@@ -28,7 +28,7 @@
                     </div>
                     <div class="recordar-olvido">
                         <label>
-                            <a href="">Olvidé mi contraseña</a>
+                            <a class="link">Olvidé mi contraseña</a>
                     </div>
                     <button type="submit" class="btn">Iniciar sesión</button>
                 </form>
@@ -50,6 +50,11 @@
                 lockIcon.classList.add("bx-lock-alt");
             }
         }
+
     </script>
+    <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
+    <script src='https://assets.codepen.io/16327/SplitText3.min.js'></script>
+    <script  src="scripts/script.js"></script>
+  
 </body>
 </html>
