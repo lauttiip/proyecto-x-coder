@@ -1,24 +1,18 @@
-const heading = document.querySelector(".heading");
-const headingSplitText = new SplitText(heading, { type: "chars" });
-const headingChars = headingSplitText.chars;
+const target = document.getElementById('animatedText');
+const text = 'Improvrein.';
+let index = 0;
 
-gsap.from(headingChars, {
-  filter: "blur(0.15em)",
-  stagger: {
-    from: "left",
-    each: .1 },
+function addLetter() {
+  const span = document.createElement('span');
+  span.textContent = text[index];
+  span.className = 'blur-in';
+  target.appendChild(span);
+  
+  index++;
+  
+  if (index < text.length) {
+    setTimeout(addLetter, 80); // Adjust the timeout to control the speed of the typing
+  }
+}
 
-  duration: i => 1.25 + i * .75,
-  ease: "power2.inOut" });
-
-
-gsap.from(headingChars, {
-  xPercent: i => (i + 1) * 20,
-  opacity: 0,
-  stagger: {
-    from: "left",
-    each: .1 },
-
-  duration: i => 1 + i * .85,
-  ease: "power2.out" },
-"<");
+addLetter(); // Start the animation
